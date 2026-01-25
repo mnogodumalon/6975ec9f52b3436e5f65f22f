@@ -1,0 +1,699 @@
+{
+  "appgroup_id": "6975ec9f52b3436e5f65f22f",
+  "appgroup_name": "Stoisches Tagebuch",
+  "apps": {
+    "stat_definitionen": {
+      "app_id": "6975ec80cd07d36f9d3388bc",
+      "name": "Stat-Definitionen",
+      "controls": {
+        "key": {
+          "identifier": "key",
+          "label": "Schl\u00fcssel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "name": {
+          "identifier": "name",
+          "label": "Name",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "description": {
+          "identifier": "description",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`)."
+        },
+        "icon": {
+          "identifier": "icon",
+          "label": "Icon",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "is_active": {
+          "identifier": "is_active",
+          "label": "Aktiv",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`)."
+        },
+        "created_at": {
+          "identifier": "created_at",
+          "label": "Erstellt am",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        }
+      }
+    },
+    "aufgaben_kategorien": {
+      "app_id": "6975ec870ed5e30e8cfc909f",
+      "name": "Aufgaben-Kategorien",
+      "controls": {
+        "key": {
+          "identifier": "key",
+          "label": "Schl\u00fcssel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "name": {
+          "identifier": "name",
+          "label": "Name",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "description": {
+          "identifier": "description",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`)."
+        },
+        "base_xp": {
+          "identifier": "base_xp",
+          "label": "Basis-XP",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "difficulty_multiplier": {
+          "identifier": "difficulty_multiplier",
+          "label": "Schwierigkeitsmultiplikator",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "default_duration_minutes": {
+          "identifier": "default_duration_minutes",
+          "label": "Standard-Dauer (Minuten)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "cooldown_hours": {
+          "identifier": "cooldown_hours",
+          "label": "Abklingzeit (Stunden)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "requires_evidence": {
+          "identifier": "requires_evidence",
+          "label": "Nachweis erforderlich",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`)."
+        },
+        "is_active": {
+          "identifier": "is_active",
+          "label": "Aktiv",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`)."
+        }
+      }
+    },
+    "aufgaben_definitionen": {
+      "app_id": "6975ec88c67aee72d346f89b",
+      "name": "Aufgaben-Definitionen",
+      "controls": {
+        "description": {
+          "identifier": "description",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`)."
+        },
+        "category_id": {
+          "identifier": "category_id",
+          "label": "Kategorie",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec870ed5e30e8cfc909f"
+        },
+        "xp_override": {
+          "identifier": "xp_override",
+          "label": "XP-\u00dcberschreibung",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "is_repeatable": {
+          "identifier": "is_repeatable",
+          "label": "Wiederholbar",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`)."
+        },
+        "key": {
+          "identifier": "key",
+          "label": "Schl\u00fcssel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "title": {
+          "identifier": "title",
+          "label": "Titel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "repeat_rule": {
+          "identifier": "repeat_rule",
+          "label": "Wiederholungsregel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "priority": {
+          "identifier": "priority",
+          "label": "Priorit\u00e4t",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "active_from": {
+          "identifier": "active_from",
+          "label": "Aktiv von",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`.\n\nFor example: `1642-12-25`."
+        },
+        "active_until": {
+          "identifier": "active_until",
+          "label": "Aktiv bis",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`.\n\nFor example: `1642-12-25`."
+        },
+        "is_active": {
+          "identifier": "is_active",
+          "label": "Aktiv",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`)."
+        }
+      }
+    },
+    "aufgabe_stat_verknuepfungen": {
+      "app_id": "6975ec89ca1af3a264252850",
+      "name": "Aufgabe-Stat-Verkn\u00fcpfungen",
+      "controls": {
+        "task_id": {
+          "identifier": "task_id",
+          "label": "Aufgaben-Definition",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec88c67aee72d346f89b"
+        },
+        "stat_id": {
+          "identifier": "stat_id",
+          "label": "Stat",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec80cd07d36f9d3388bc"
+        },
+        "weight": {
+          "identifier": "weight",
+          "label": "Gewichtung",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "xp_share": {
+          "identifier": "xp_share",
+          "label": "XP-Anteil",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        }
+      }
+    },
+    "tagebucheintraege": {
+      "app_id": "6975ec8930214ae3b085906a",
+      "name": "Tagebucheintr\u00e4ge",
+      "controls": {
+        "occurred_at": {
+          "identifier": "occurred_at",
+          "label": "Zeitpunkt",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        },
+        "title": {
+          "identifier": "title",
+          "label": "Titel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "client_context": {
+          "identifier": "client_context",
+          "label": "Client-Kontext",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`)."
+        },
+        "is_private": {
+          "identifier": "is_private",
+          "label": "Privat",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`)."
+        },
+        "deleted_at": {
+          "identifier": "deleted_at",
+          "label": "Gel\u00f6scht am",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        },
+        "text": {
+          "identifier": "text",
+          "label": "Text",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`)."
+        },
+        "source_type": {
+          "identifier": "source_type",
+          "label": "Quellentyp",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        }
+      }
+    },
+    "aufgaben": {
+      "app_id": "6975ec8a00a9eae13ac5b92b",
+      "name": "Aufgaben",
+      "controls": {
+        "entry_id": {
+          "identifier": "entry_id",
+          "label": "Tagebucheintrag",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec8930214ae3b085906a"
+        },
+        "task_definition_id": {
+          "identifier": "task_definition_id",
+          "label": "Aufgaben-Definition",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec88c67aee72d346f89b"
+        },
+        "title": {
+          "identifier": "title",
+          "label": "Titel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        },
+        "status": {
+          "identifier": "status",
+          "label": "Status",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`).\n\nThe available options are defined in the `lookup_data` attribute of this control's LivingApp.\n\nThe field value will be the key in this `lookup_data` attribute or `null`.",
+          "lookup_data": {
+            "open": "Offen",
+            "done": "Erledigt",
+            "canceled": "Abgebrochen"
+          }
+        },
+        "due_date": {
+          "identifier": "due_date",
+          "label": "F\u00e4lligkeitsdatum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`.\n\nFor example: `1642-12-25`."
+        },
+        "completed_at": {
+          "identifier": "completed_at",
+          "label": "Abgeschlossen am",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        },
+        "importance": {
+          "identifier": "importance",
+          "label": "Wichtigkeit",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "confidence": {
+          "identifier": "confidence",
+          "label": "Zuversicht",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "created_at": {
+          "identifier": "created_at",
+          "label": "Erstellt am",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        }
+      }
+    },
+    "xp_events": {
+      "app_id": "6975ec8a82825967e078b82a",
+      "name": "XP-Events",
+      "controls": {
+        "task_id": {
+          "identifier": "task_id",
+          "label": "Aufgabe",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec8a00a9eae13ac5b92b"
+        },
+        "task_definition_id": {
+          "identifier": "task_definition_id",
+          "label": "Aufgaben-Definition",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec88c67aee72d346f89b"
+        },
+        "stat_id": {
+          "identifier": "stat_id",
+          "label": "Stat",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec80cd07d36f9d3388bc"
+        },
+        "entry_id": {
+          "identifier": "entry_id",
+          "label": "Tagebucheintrag",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec8930214ae3b085906a"
+        },
+        "date": {
+          "identifier": "date",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`.\n\nFor example: `1642-12-25`."
+        },
+        "base_xp": {
+          "identifier": "base_xp",
+          "label": "Basis-XP",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "difficulty_multiplier": {
+          "identifier": "difficulty_multiplier",
+          "label": "Schwierigkeitsmultiplikator",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "importance": {
+          "identifier": "importance",
+          "label": "Wichtigkeit",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "confidence": {
+          "identifier": "confidence",
+          "label": "Zuversicht",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "xp_multiplier": {
+          "identifier": "xp_multiplier",
+          "label": "XP-Multiplikator",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "final_xp": {
+          "identifier": "final_xp",
+          "label": "Finale XP",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "reason": {
+          "identifier": "reason",
+          "label": "Begr\u00fcndung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`)."
+        },
+        "created_at": {
+          "identifier": "created_at",
+          "label": "Erstellt am",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        }
+      }
+    },
+    "zeit_logs": {
+      "app_id": "6975ec8bb04dec6d94161866",
+      "name": "Zeit-Logs",
+      "controls": {
+        "stat_id": {
+          "identifier": "stat_id",
+          "label": "Stat",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec80cd07d36f9d3388bc"
+        },
+        "entry_id": {
+          "identifier": "entry_id",
+          "label": "Tagebucheintrag",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec8930214ae3b085906a"
+        },
+        "date": {
+          "identifier": "date",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`.\n\nFor example: `1642-12-25`."
+        },
+        "minutes": {
+          "identifier": "minutes",
+          "label": "Minuten",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "source": {
+          "identifier": "source",
+          "label": "Quelle",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`).\n\nThe available options are defined in the `lookup_data` attribute of this control's LivingApp.\n\nThe field value will be the key in this `lookup_data` attribute or `null`.",
+          "lookup_data": {
+            "manual": "Manuell",
+            "inferred": "Abgeleitet",
+            "timer": "Timer"
+          }
+        },
+        "confidence": {
+          "identifier": "confidence",
+          "label": "Zuversicht",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "notes": {
+          "identifier": "notes",
+          "label": "Notizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`)."
+        },
+        "created_at": {
+          "identifier": "created_at",
+          "label": "Erstellt am",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        }
+      }
+    },
+    "tages_rollups": {
+      "app_id": "6975ec8b240115de7a84dd82",
+      "name": "Tages-Rollups",
+      "controls": {
+        "date": {
+          "identifier": "date",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`.\n\nFor example: `1642-12-25`."
+        },
+        "stat_id": {
+          "identifier": "stat_id",
+          "label": "Stat",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to another LivingApp record from a target lookup app (or `null`).\n\nThe field value will be a valid record URL in the form `https://<hostname>/rest/apps/<app-id>/records/<record-id>` or `null`.",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6975ec80cd07d36f9d3388bc"
+        },
+        "xp_total": {
+          "identifier": "xp_total",
+          "label": "Gesamt-XP",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "minutes_total": {
+          "identifier": "minutes_total",
+          "label": "Gesamt-Minuten",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`).",
+          "precision": null
+        },
+        "computed_at": {
+          "identifier": "computed_at",
+          "label": "Berechnet am",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`.\n\nFor example: `1879-03-14T11:30`."
+        },
+        "computation_version": {
+          "identifier": "computation_version",
+          "label": "Berechnungsversion",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`)."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Stat-Definitionen",
+      "Aufgaben-Kategorien",
+      "Aufgaben-Definitionen",
+      "Aufgabe-Stat-Verkn\u00fcpfungen",
+      "Tagebucheintr\u00e4ge",
+      "Aufgaben",
+      "XP-Events",
+      "Zeit-Logs",
+      "Tages-Rollups"
+    ]
+  }
+}
