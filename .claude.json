@@ -9,5 +9,10 @@
   "firstStartTime": "2026-01-25T10:13:18.365Z",
   "userID": "c9850cbc667af00a744870544906627292ddf850c7ec0d022628f59e4b20df1f",
   "sonnet45MigrationComplete": true,
-  "opus45MigrationComplete": true
+  "opus45MigrationComplete": true,
+  "githubRepoPaths": {
+    "mnogodumalon/6975ec9f52b3436e5f65f22f": [
+      "/home/user/app"
+    ]
+  }
 }

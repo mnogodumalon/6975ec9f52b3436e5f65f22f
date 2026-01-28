@@ -775,7 +775,7 @@ export default function Dashboard() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-xl md:text-2xl font-semibold text-foreground">
-                Stoisches Tagebuch
+                Mein Tagebuch
               </h1>
               <p className="text-sm text-muted-foreground">
                 Heute, {format(new Date(), 'd. MMMM', { locale: de })}
